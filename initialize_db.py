@@ -1,19 +1,17 @@
+import os
+
 from trie import Trie
 
 
 class Initialize_DB:
     def __init__(self):
-        self.__file_name = 'file.txt'
+        self.__root_directory = 'resources'
         self.__trie = Trie()
 
     def run(self):
-        try:
-            with open(self.__file_name, "r") as file:
-                offset = 0
-                for line in file:
-                    self.__trie.insert(line, self.__file_name, offset)
-                    offset += 1
-        except:
-            pass
-
+        for (root, dirs, files) in os.walk(self.__root_directory, topdown=True):
+            for file in files:
+                with open(root + "\\" + file, encoding="utf8") as initialize_file:
+                    for line in initialize_file:
+                        self.__trie.insert(line)
 
