@@ -1,15 +1,12 @@
-# This is a sample Python script.
+from trie import Trie
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+for i in range(33, 97):
+    print(chr(i))
+print("")
 
-
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    pass
-
-
-
-
+# trie = Trie()
+# trie.insert("bc")
+# trie.insert("abcsab")
+# trie.insert("acdab")
+# trie.insert("acdab")
+# print(trie.search("b"))
