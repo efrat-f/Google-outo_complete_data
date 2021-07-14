@@ -2,7 +2,7 @@ from db_dict_alpha import DBDictAlpha
 from trie_node import TrieNode
 
 
-class Trie():
+class Trie:
     def __init__(self):
         self.__root = TrieNode()
         self.__dict_alpha = DBDictAlpha()
@@ -30,5 +30,3 @@ class Trie():
                     return None
             node.dfs(results)
         return results
-
-

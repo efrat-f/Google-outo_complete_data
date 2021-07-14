@@ -7,10 +7,10 @@ class TrieNode:
         # isEndOfWord is True if node represent the end of the word
         self.__is_end = end
 
-    def set_child(self, chr, val):
+    def set(self, chr, val):
         self.__children[ord(chr) - 97] = val
 
-    def get_child(self, chr):
+    def get(self, chr):
         return self.__children[ord(chr) - 97]
 
     def get_end(self):
