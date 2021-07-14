@@ -21,12 +21,12 @@ class TrieNode:
 
     def add_child(self, chr, end=False):
         node = TrieNode(end)
-        self.set_child(chr, node)
+        self.set(chr, node)
 
     def dfs(self, arr_completes):
         while len(arr_completes) < 5:
             if self.get_end():
-                if self.get_end() not in arr_completes:
+                if self.get() not in arr_completes:
                     arr_completes.append(self.get_end())
                 return
             for i in self.__children:

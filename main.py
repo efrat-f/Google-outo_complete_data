@@ -1,8 +1,6 @@
 from trie import Trie
 
-for i in range(33, 97):
-    print(chr(i))
-print("")
+
 
 # trie = Trie()
 # trie.insert("bc")

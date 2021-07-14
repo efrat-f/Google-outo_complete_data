@@ -10,14 +10,15 @@ class Trie:
     def insert(self, string):
         node = self.__root
         for char in string:
-            if not char.isalpha():
+            if not 97 <= ord(char) < 123:
                 continue
-            if node.get_child(char) is None:
+            char = char.lower()
+            if node.get(char) is None:
                 node.add_child(char)
-                node = node.get_child(char)
+                node = node.get(char)
                 self.__dict_alpha.add_item(char, node)
             else:
-                node = node.get_child(char)
+                node = node.get(char)
         node.add_child(chr(97+27), string)
 
     def search(self, string):

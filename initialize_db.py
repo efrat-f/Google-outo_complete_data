@@ -5,7 +5,7 @@ from trie import Trie
 
 class Initialize_DB:
     def __init__(self):
-        self.__root_directory = 'resources'
+        self.__root_directory = 'resources\\2021-archive\\pythin-3.8.4-docs-text'
         self.__trie = Trie()
 
     def run(self):
@@ -14,4 +14,7 @@ class Initialize_DB:
                 with open(root + "\\" + file, encoding="utf8") as initialize_file:
                     for line in initialize_file:
                         self.__trie.insert(line)
+
+
+
 

@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
-      <module fileurl="file://$PROJECT_DIR$/.idea/project_google.iml" filepath="$PROJECT_DIR$/.idea/project_google.iml" />
-=======
       <module fileurl="file://$PROJECT_DIR$/.idea/google - python.iml" filepath="$PROJECT_DIR$/.idea/google - python.iml" />
->>>>>>> master
     </modules>
   </component>
 </project>

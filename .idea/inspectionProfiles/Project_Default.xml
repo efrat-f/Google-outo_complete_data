@@ -4,28 +4,18 @@
     <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
       <option name="ignoredErrors">
         <list>
-<<<<<<< HEAD
-=======
           <option value="N803" />
           <option value="N806" />
->>>>>>> master
           <option value="N802" />
+          <option value="N801" />
         </list>
       </option>
     </inspection_tool>
     <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ignoredIdentifiers">
         <list>
-<<<<<<< HEAD
-          <option value="list.shuffle" />
-          <option value="dict.iteritems" />
-          <option value="object.*" />
-          <option value="str.execute" />
-          <option value="str.counter" />
-=======
           <option value="manipulation_commands.ManipulationCommands.__getitem__" />
           <option value="dict.__getitem__" />
->>>>>>> master
         </list>
       </option>
     </inspection_tool>
