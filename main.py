@@ -1,12 +1,16 @@
+from CLI import CLI
 from trie import Trie
 
-for i in range(33, 97):
-    print(chr(i))
-print("")
+# for i in range(65, 90):
+#     print(chr(i))
+# print(chr(321).isalpha())
 
 # trie = Trie()
-# trie.insert("bc")
-# trie.insert("abcsab")
-# trie.insert("acdab")
-# trie.insert("acdab")
+# trie.insert_word("bc", 1, 2)
+# trie.insert_word("abcsab", 1, 2)
+# trie.insert_word("acdab", 1, 2)
+# trie.insert_word("acda", 1, 2)
 # print(trie.search("b"))
+
+cli = CLI()
+cli.run()
