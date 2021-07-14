@@ -1,5 +1,5 @@
 class TrieNode:
-    alphabet_size = 28
+    alphabet_size = 29
 
     # Trie node class
     def __init__(self, end=False):
