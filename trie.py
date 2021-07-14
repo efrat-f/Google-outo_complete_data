@@ -8,7 +8,7 @@ class Trie():
     def insert(self, string):
         node = self.__root
         for char in string:
-            if node.containsKey(char) is None:
-                node.put(char)
-            node = node.get(char)
+            if node.get_child(char) is None:
+                node.set_children(char)
+            node = node.get_child(char)
         node.set_end()
