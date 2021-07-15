@@ -5,7 +5,7 @@ from trie import Trie
 
 class Initialize_DB:
     def __init__(self):
-        self.__root_directory = 'resources\\2021-archive\\python-3.8.4-docs-text\\c-api'
+        self.__root_directory = 'resources\\2021-archive\\python-3.8.4-docs-text\\distributing'
 
     def run(self, trie):
         for (root, dirs, files) in os.walk(self.__root_directory, topdown=True):

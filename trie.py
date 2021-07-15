@@ -9,7 +9,7 @@ class Trie:
         self.__root = TrieNode()
         self.__dict_alpha = DBDictAlpha()
 
-    def insert(self, string, origin_string, offset, file):
+    def insert(self, string, offset, file):
         node = self.__root
         for char in string:
             if not 96 < ord(char) < 123 and not 64 < ord(char) < 91 and not char == " ":
@@ -21,30 +21,28 @@ class Trie:
         if node.get(chr(97 + 27)) is None:
             node.add_child(chr(97 + 27), [])
         node = node.get(chr(97 + 27))
-        node.add_end(origin_string)
+        node.add_end((offset, file))
 
-    def search(self, string, root=None):
-        results = []
-        if root is None:
-            root = self.__root
-        node = root
+    def search(self, string, score, results=[]):
+        # if root is None:
+        #     root = self.__root
+        node = self.__root
         for char in string:
             if not 96 < ord(char) < 123 and not 64 < ord(char) < 91 and not char == " ":
                 continue
             char = char.lower()
             node = node.get(char)
             if node is None:
-                return results, node
-        results = node.dfs(results)
-        return results, node
+                return results
+        results = node.dfs(results, score)
+        return results
 
     def insert_word(self, string, offset, file):
         for i in range(len(string)):
-            self.insert(string[i:], string, offset, file)
+            self.insert(string[i:], offset, file)
 
     # def switching_manipulation(self, string):
     #     for i in range(4, len(string)):
     #         for letter in ascii_lowercase:
     #             string = string[:i+1] + letter + string[i+2:]
     #             return self.search(string)
-

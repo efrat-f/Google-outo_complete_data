@@ -1,3 +1,6 @@
+from auto_complete_data import AutoCompleteData
+
+
 class TrieNode:
     alphabet_size = 29
 
@@ -28,22 +31,22 @@ class TrieNode:
         node = TrieNode(end)
         self.set(chr, node)
 
-    def dfs(self, arr_completes):
+    def dfs(self, arr_completes, score):
         if self.get_end():
             for complete in self.get_end():
                 if len(arr_completes) >= 5:
                     return
                 exist = False
                 for obj in arr_completes:
-                    if obj[0] == complete[0] and obj[1] == complete[1]:
+                    if obj.get_offset() == complete[0] and obj.get_source_text() == complete[1]:
                         exist = True
                         break
                 if not exist:
-                    arr_completes.append(complete)
+                    arr_completes.append(AutoCompleteData(complete[0], complete[1], score))
             return
         for i in self.__children:
             if i is not None:
-                i.dfs(arr_completes)
+                i.dfs(arr_completes, score)
         return arr_completes
 
     def add_end(self, auto_complete):

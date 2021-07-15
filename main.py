@@ -13,5 +13,6 @@ from trie import Trie
 # trie.insert_word("acda", 1, 2)
 # print(trie.switching_manipulation("abcsad"))
 
+
 cli = CLI()
-cli.switching_manipulation()
+cli.run()
