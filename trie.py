@@ -12,7 +12,7 @@ class Trie:
     def insert(self, string, origin_string, offset, file):
         node = self.__root
         for char in string:
-            if not 96 < ord(char) < 123 and not 64 < ord(char) < 91 and not char == "":
+            if not 96 < ord(char) < 123 and not 64 < ord(char) < 91 and not char == " ":
                 continue
             char = char.lower()
             if node.get(char) is None:
@@ -29,7 +29,7 @@ class Trie:
             root = self.__root
         node = root
         for char in string:
-            if not 96 < ord(char) < 123 and not 64 < ord(char) < 91 and not char == "":
+            if not 96 < ord(char) < 123 and not 64 < ord(char) < 91 and not char == " ":
                 continue
             char = char.lower()
             node = node.get(char)
